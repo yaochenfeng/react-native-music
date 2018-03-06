@@ -1,5 +1,17 @@
+
 {
   "expo": {
-    "sdkVersion": "25.0.0"
+    "name": "music",
+    "sdkVersion": "25.0.0",
+    "version": "1.0.0",
+    "slug": "react-native-news",
+    "ios": {
+      "bundleIdentifier": "com.chenfeng.app.music",
+      "buildNumber":"1.0.0.1"
+
+    },
+    "android": {
+      "package": "com.chenfeng.app.music"
+    }
   }
 }
