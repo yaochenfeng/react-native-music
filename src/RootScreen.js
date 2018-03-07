@@ -3,7 +3,7 @@ import { Button, View, Text } from 'react-native';
 import { TabNavigator, StackNavigator, TabBarBottom } from 'react-navigation';
 import Icon from 'react-native-vector-icons/Ionicons';
 import DiscoverMusic from "./discovermusic"
-
+import { DetailScene } from './details';
 class Demo extends React.Component {
     render() {
         return (
@@ -72,6 +72,7 @@ const Tab = TabNavigator(
 export const RootScreen = StackNavigator(
     {
         Tab: { screen: Tab},
+        Detail: { screen: DetailScene},
     },
     {
         navigationOptions: {
@@ -81,3 +82,9 @@ export const RootScreen = StackNavigator(
         }
     }
 );
+const defaultGetStateForAction = RootScreen.router.getStateForAction;
+RootScreen.router.getStateForAction = (action, state) => {
+    console.log("action = "+JSON.stringify(action) + "state = "+ JSON.stringify(state));
+
+    return defaultGetStateForAction(action, state);
+};

@@ -3,7 +3,7 @@ import { Button, View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { screen, color } from '../utils';
 import ScrollableTabView, { DefaultTabBar } from 'react-native-scrollable-tab-view';
-
+import MainMusicScene from './MainMusicScene';
 class Demo extends React.Component {
     render() {
         return (
@@ -30,7 +30,7 @@ export default class DiscoverMusic extends React.Component {
     });
     render() {
         const types = [
-            {title: '音乐', component: Demo},
+            {title: '音乐', component: MainMusicScene},
             {title: '视频', component: Demo},
             {title: '电台', component: Demo},
         ];
